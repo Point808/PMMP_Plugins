@@ -37,6 +37,6 @@ class AdminMail extends PluginBase implements Listener {
 		$player = $event->getPlayer();
 		$name = $player->getName();
 		$adminmail = $this->getConfig()->get("adminmail");
-		mail($adminmail, "PMMP - $name joined", "Hello, player $name has joined the server.");
+		#mail($adminmail, "PMMP - $name joined", "Hello, player $name has joined the server.");
 	}
 }
