@@ -1,0 +1,15 @@
+name: AdminMail
+main: AdminMail\AdminMail
+api: 3.0.0-ALPHA5
+version: 0.0.1
+description: "Administrative email on events"
+
+commands:
+  mail:
+    description: "Root command"
+    permission: mail.permission
+
+permissions:
+  mail.permission:
+    default: op
+    description: "Allow user to use this plugin"
