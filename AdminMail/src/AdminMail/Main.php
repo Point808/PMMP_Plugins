@@ -11,7 +11,8 @@ use pocketmine\command\CommandSender;
 use pocketmine\utils\Config;
 
 
-class AdminMail extends PluginBase implements Listener {
+class Main extends PluginBase implements Listener {
+
 	
 	public function onLoad() { # Called when the plugin is being loaded by the server
 		$this->getLogger()->info("Loading plugin..."); # Logs to the console
@@ -32,11 +33,21 @@ class AdminMail extends PluginBase implements Listener {
 			$sender->sendMessage("This is an example command"); # Sends to the sender
 		}
 	}
-	
+
+
+
+
 	public function onJoin(PlayerJoinEvent $event) { # Called when a player joins
 		$player = $event->getPlayer();
 		$name = $player->getName();
 		$adminmail = $this->getConfig()->get("adminmail");
-		mail($adminmail, "PMMP - $name joined", "Hello, player $name has joined the server.");
+		$adminsubject = $this->getConfig()->get("adminsubject");
+		$adminmessage = $this->getConfig()->get("adminmessage");
+
+
+		//mail($adminmail, "PMMP - $name joined", "Hello, player $name has joined the server.");
+		//sleep(10);
+                $task = new EmailTask($this, $adminmail, $name, $adminsubject, $adminmessage); // Create the new class Task by calling
+                $this->getServer()->getScheduler()->scheduleDelayedTask($task, 5*20); // Counted in ticks (1 second = 20 ticks)
 	}
 }

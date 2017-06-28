@@ -1,2 +1,4 @@
 enabled: true
 adminmail: youradmin@email.com
+adminsubject: PMMP - Player PNAME has joined
+adminmessage: Hello. This is to let you know player PNAME has joined the server. 
