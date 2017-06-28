@@ -1,5 +1,5 @@
 name: AdminMail
-main: AdminMail\AdminMail
+main: AdminMail\Main
 api: 3.0.0-ALPHA5
 version: 0.0.1
 description: "Administrative email on events"
