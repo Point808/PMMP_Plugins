@@ -3,7 +3,7 @@
 Extracted plugin from old PocketMine and minor update to work on PMMP
 
 ### CREDIT! ###
-Credits - this seems to belong to "Guillaume351" but I couldn't find a git repo to fork from.
+Extracted plugin from old PocketMine and minor update to work on PMMP. ***Credits - this belongs to Guillaume351 but I couldn't find a git repo to fork from.
 
 ### USAGE ###
 /hour - get the hour  
