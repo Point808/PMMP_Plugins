@@ -22,7 +22,7 @@ class EmailTask extends PluginTask {
 		$this->adminmessage = $adminmessage;
 	}
 
-	public function onRun($tick) {
+	public function onRun(int $currentTick) {
 		$player = $this->getOwner()->getServer()->getPlayer($this->playername);
 		$name = $player->getName();
 		$admin = $this->adminmail;
