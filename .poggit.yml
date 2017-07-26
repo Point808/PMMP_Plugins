@@ -6,4 +6,6 @@ projects:
     path: AdminMail/
   RealTime:
     path: RealTime/
+  ASR:
+    path: ASR/
 ...
