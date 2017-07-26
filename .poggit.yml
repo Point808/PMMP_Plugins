@@ -4,4 +4,6 @@ branches:
 projects:
   AdminMail:
     path: AdminMail/
+  RealTime:
+    path: RealTime/
 ...
