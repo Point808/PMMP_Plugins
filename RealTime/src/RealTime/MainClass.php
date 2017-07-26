@@ -93,7 +93,7 @@ $test = date('H') + ($modify);
 	
 	
 	
-	public function onCommand(CommandSender $sender, Command $command, $label, array $args){
+	public function onCommand(CommandSender $sender, Command $command, string $label, array $args){
 		
 		if(!($sender instanceof Player)){
 		$this->getLogger()->info(TextFormat::DARK_RED. "[RealTime] Please run this command in-game.\n");						
