@@ -27,7 +27,7 @@ class tellTimeTask extends PluginTask{
     }
 
 
-    public function onRun($currentTick)
+    public function onRun(int $currentTick)
     {
         // TODO: Implement onRun() method.
     }
