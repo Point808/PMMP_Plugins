@@ -13,9 +13,6 @@ use pocketmine\event\Listener;
 use pocketmine\level\Level;
 use pocketmine\utils\Config;
 use pocketmine\scheduler\CallbackTask;
-use pocketmine\scheduler\PluginTask;
-use pocketmine\scheduler\TaskScheduler;
-use pocketmine\scheduler\Task;
 
 
 class MainClass extends PluginBase implements Listener{
@@ -72,12 +69,12 @@ $test = date('H') + ($modify);
 		}
 		
 		$this->getLogger()->info(TextFormat::DARK_GREEN ."[RealTime] It is " . $test. " (20h is same as 8pm)");		
-		$this->getServer()->getScheduler()->scheduleRepeatingTask(new changeTimeTask($this), 120);
+		$this->getPlugin()->getScheduler()->scheduleRepeatingTask(new changeTimeTask($this), 120);
 		$this->changeTime();
 		
 		if ($tTime == true) {
 		$this->getLogger()->info($tTimeInterval);
-		$this->getServer()->getScheduler()->scheduleRepeatingTask(new tellTimeTask($this), $tTimeInterval);
+		$this->getPlugin()->getScheduler()->scheduleRepeatingTask(new tellTimeTask($this), $tTimeInterval);
 		$this->tellTime();
 		}
 												
