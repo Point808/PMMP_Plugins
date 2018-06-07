@@ -12,8 +12,9 @@ use pocketmine\utils\TextFormat;
 use pocketmine\event\Listener;
 use pocketmine\level\Level;
 use pocketmine\utils\Config;
-use pocketmine\scheduler\PluginTask;
-
+use pocketmine\scheduler\CallbackTask;
+use pocketmine\scheduler\TaskScheduler;
+use pocketmine\scheduler\Task;
 
 
 class MainClass extends PluginBase implements Listener{
