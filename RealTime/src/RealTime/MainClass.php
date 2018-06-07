@@ -12,7 +12,7 @@ use pocketmine\utils\TextFormat;
 use pocketmine\event\Listener;
 use pocketmine\level\Level;
 use pocketmine\utils\Config;
-use pocketmine\scheduler\CallbackTask;
+use pocketmine\scheduler\PluginTask;
 
 
 
