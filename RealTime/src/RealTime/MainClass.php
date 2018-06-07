@@ -13,6 +13,7 @@ use pocketmine\event\Listener;
 use pocketmine\level\Level;
 use pocketmine\utils\Config;
 use pocketmine\scheduler\CallbackTask;
+use pocketmine\scheduler\PluginTask;
 use pocketmine\scheduler\TaskScheduler;
 use pocketmine\scheduler\Task;
 
