@@ -1,6 +1,6 @@
 name: AdminMail
 main: AdminMail\Main
-api: [3.0.0-ALPHA5, 3.0.0-ALPHA6, 3.0.0-ALPHA7, 3.0.0-ALPHA8, 3.0.0-ALPHA9, 3.0.0-ALPHA10, 3.0.0-ALPHA11]
+api: [3.0.0, 4.0.0]
 version: 0.0.3
 description: "Administrative email on events"
 
