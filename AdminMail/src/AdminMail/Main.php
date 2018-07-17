@@ -25,7 +25,7 @@ class Main extends PluginBase implements Listener {
 		$adminsubject = $this->getConfig()->get("adminsubject");
 		$adminmessage = $this->getConfig()->get("adminmessage");
                 $task = new EmailTask($this, $adminmail, $name, $adminsubject, $adminmessage);
-                $this->getServer()->getScheduler()->scheduleDelayedTask($task, 5*20);
+                $this->getScheduler()->scheduleDelayedTask($task, 5*20);
 	}
 
 }
