@@ -92,7 +92,7 @@ class Loader extends PluginBase{
 			return;
 		}else{
 			$timer--;
-			$this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this,"initial_start" ], [$timer]), 20);
+			$this->getScheduler()->scheduleDelayedTask(new CallbackTask([$this,"initial_start" ], [$timer]), 20);
 		}
 	}
 	
@@ -109,7 +109,7 @@ class Loader extends PluginBase{
 		if($time_target < $this->restart_time){
 			$this->db->updateTimestamp();
 		}
-		$this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this,"start" ], [$time_target]), 1200);
+		$this->getScheduler()->scheduleDelayedTask(new CallbackTask([$this,"start" ], [$time_target]), 1200);
 	}
 	
 	public function count_down($seconds){
@@ -125,7 +125,7 @@ class Loader extends PluginBase{
 			if($seconds == 30) $this->broadcast("Server will restart in $seconds seconds.");
 			if($seconds == 10) $this->broadcast("Server will restart in $seconds seconds.");
 			if($seconds < 6) $this->broadcast("Server will restart in $seconds.");
-			$this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this,"count_down" ], [$seconds]), 20);
+			$this->getScheduler()->scheduleDelayedTask(new CallbackTask([$this,"count_down" ], [$seconds]), 20);
 		}
 	}
 	
