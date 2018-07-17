@@ -12,7 +12,7 @@ use pocketmine\command\CommandSender;
 use pocketmine\utils\Config;
 use AdminMail\Main;
 
-class EmailTask extends PluginTask {
+class EmailTask extends Task {
 
 	public function __construct(Main $main, string $adminmail, string $playername, string $adminsubject, string $adminmessage) {
 		parent::__construct($main);
