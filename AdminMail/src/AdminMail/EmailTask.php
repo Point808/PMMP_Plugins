@@ -15,7 +15,6 @@ use AdminMail\Main;
 class EmailTask extends Task {
 
 	public function __construct(Main $main, string $adminmail, string $playername, string $adminsubject, string $adminmessage) {
-		parent::__construct($main);
 		$this->playername = $playername;
 		$this->adminmail = $adminmail;
 		$this->adminsubject = $adminsubject;
