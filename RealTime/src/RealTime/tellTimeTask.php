@@ -9,9 +9,9 @@
 namespace RealTime;
 
 
-use pocketmine\scheduler\PluginTask;
+use pocketmine\scheduler\Task;
 
-class tellTimeTask extends PluginTask{
+class tellTimeTask extends Task{
 
     /**
      * Actions to execute when run
@@ -22,7 +22,6 @@ class tellTimeTask extends PluginTask{
      */
     public $plugin;
     public function __construct($plugin){
-        parent::__construct($plugin);
         $this->plugin = $plugin;
     }
 
