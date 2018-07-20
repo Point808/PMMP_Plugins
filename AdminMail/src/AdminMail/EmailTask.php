@@ -4,7 +4,7 @@ namespace AdminMail;
 
 use pocketmine\scheduler\Task;
 use pocketmine\Player;
-use pocketmine\event\player\PlayerJoinEvent;
+use pocketmine\event\player\PlayerLoginEvent;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\command\Command;
@@ -22,8 +22,7 @@ class EmailTask extends Task {
 	}
 
 	public function onRun(int $currentTick) {
-		$player = $this->getOwner()->getServer()->getPlayer($this->playername);
-		$name = $player->getName();
+		$name = $this->playername;
 		$admin = $this->adminmail;
 		$admin1 = $this->adminsubject;
 		$admin1 = str_replace("PNAME", $name, $admin1);
