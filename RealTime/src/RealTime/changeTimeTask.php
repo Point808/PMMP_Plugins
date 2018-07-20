@@ -1,12 +1,11 @@
 <?php
 namespace RealTime;
 
-use pocketmine\scheduler\PluginTask;
+use pocketmine\scheduler\Task;
 
-class changeTimeTask extends PluginTask{
+class changeTimeTask extends Task{
     public $plugin;
     public function __construct($plugin){
-        parent::__construct($plugin);
         $this->plugin = $plugin;
     }
 
